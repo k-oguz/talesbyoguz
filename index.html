@@ -5,36 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>talesbyoguz — Apps &amp; Legal</title>
   <style>
-    :root { color-scheme: light dark; }
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #1c1c1e;
+      --muted: #525257;
+      --card-bg: #ffffff;
+      --border: #e5e5ea;
+      --accent: #c84b11;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111113;
+        --fg: #f2f2f7;
+        --muted: #a1a1a6;
+        --card-bg: #1c1c1e;
+        --border: #2c2c2e;
+        --accent: #ff9f43;
+      }
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 680px;
       margin: 0 auto;
       padding: 40px 20px 64px;
       line-height: 1.65;
-      color: #1c1c1e;
-      background: #fafafa;
-    }
-    @media (prefers-color-scheme: dark) {
-      body { color: #f2f2f7; background: #111113; }
-      a { color: #ff9f43; }
-      .card { background: #1c1c1e; border-color: #2c2c2e; }
-      .muted { color: #98989d; }
+      color: var(--fg);
+      background: var(--bg);
     }
     h1 { font-size: 1.85rem; margin: 0 0 8px; letter-spacing: -0.02em; }
-    h2 { font-size: 1.15rem; margin: 28px 0 10px; }
+    h2 { font-size: 1.15rem; margin: 0 0 10px; }
     p { margin: 0 0 14px; }
-    .muted { color: #636366; font-size: 0.95rem; }
+    .muted { color: var(--muted); font-size: 0.95rem; }
     .card {
-      background: #ffffff;
-      border: 1px solid #e5e5ea;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px 22px;
       margin-top: 24px;
     }
     ul { padding-left: 20px; margin: 8px 0 0; }
     li { margin: 8px 0; }
-    a { color: #d95d1e; text-decoration: none; font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
     footer { margin-top: 40px; font-size: 0.85rem; }
   </style>

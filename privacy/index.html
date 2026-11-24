@@ -5,30 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — talesbyoguz</title>
   <style>
-    :root { color-scheme: light dark; }
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --fg: #1c1c1e;
+      --muted: #525257;
+      --border: #e5e5ea;
+      --accent: #c84b11;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111113;
+        --fg: #f2f2f7;
+        --muted: #a1a1a6;
+        --border: #2c2c2e;
+        --accent: #ff9f43;
+      }
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 720px;
       margin: 0 auto;
       padding: 40px 20px 64px;
       line-height: 1.65;
-      color: #1c1c1e;
-      background: #fafafa;
-    }
-    @media (prefers-color-scheme: dark) {
-      body { color: #f2f2f7; background: #111113; }
-      a { color: #ff9f43; }
-      .muted { color: #98989d; }
-      hr { border-color: #2c2c2e; }
+      color: var(--fg);
+      background: var(--bg);
     }
     h1 { font-size: 1.85rem; margin: 0 0 6px; letter-spacing: -0.02em; }
     h2 { font-size: 1.15rem; margin: 28px 0 8px; }
     p, li { margin: 0 0 12px; }
     ul { padding-left: 20px; margin: 4px 0 14px; }
-    .muted { color: #636366; font-size: 0.92rem; }
-    a { color: #d95d1e; text-decoration: none; font-weight: 500; }
+    .muted { color: var(--muted); font-size: 0.92rem; }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
-    hr { border: 0; border-top: 1px solid #e5e5ea; margin: 24px 0; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
     nav { margin-bottom: 24px; font-size: 0.92rem; }
   </style>
 </head>
